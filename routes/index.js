@@ -5,11 +5,6 @@ const { asyncErrorHandler } = require('../middleware');
 
 // Front-End Routes
 
-/* GET home page. */
-// router.get('/', function (req, res, next) {
-// 	res.render('index', { title: 'Express' });
-// });
-
 /* GET home/landing page. */
 router.get('/', asyncErrorHandler(landingPage));
 

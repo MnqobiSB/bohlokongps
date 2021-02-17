@@ -15,16 +15,13 @@ const {
 	putForgotPw,
 	getReset,
 	putReset
-} = require('../controllers');
+} = require('../controllers/user');
 const {
 	asyncErrorHandler,
 	isLoggedIn,
 	isValidPassword,
 	changePassword
 } = require('../middleware');
-
-/* GET home/landing page. */
-router.get('/', asyncErrorHandler(landingPage));
 
 /* GET /signin */
 router.get('/signup', getSignup);
