@@ -1,5 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const { landingPage } = require('../controllers');
+const { asyncErrorHandler } = require('../middleware');
 
 // Front-End Routes
 
@@ -8,10 +10,9 @@ var router = express.Router();
 // 	res.render('index', { title: 'Express' });
 // });
 
-// GET / landing page
-router.get('/', (req, res) => {
-	res.send('Welocome to the Home Page');
-});
+/* GET home/landing page. */
+router.get('/', asyncErrorHandler(landingPage));
+
 // GET /about
 router.get('/about', (req, res) => {
 	res.send('Welocome to the About Us Page');
