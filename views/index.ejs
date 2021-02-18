@@ -1,0 +1,7 @@
+<% layout('layouts/boilerplate') -%>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<script>
+	const posts = { features: <%- JSON.stringify(posts) %> };
+</script>

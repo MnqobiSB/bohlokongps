@@ -10,7 +10,9 @@ router.get('/', asyncErrorHandler(landingPage));
 
 // GET /about
 router.get('/about', (req, res) => {
-	res.send('Welocome to the About Us Page');
+	res.render('about', {
+		title: 'About Us'
+	});
 });
 // Get /staff
 router.get('/staff', (req, res) => {
