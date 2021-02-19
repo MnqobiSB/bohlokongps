@@ -18,6 +18,10 @@ const UserSchema = new Schema(
 			type: Boolean,
 			default: false
 		},
+		isStaff: {
+			type: Boolean,
+			default: false
+		},
 		agreeToTerms: {
 			type: Boolean,
 			default: false,
