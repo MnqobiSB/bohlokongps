@@ -12,17 +12,38 @@
 <!-- Covid Awareness Section -->
 <section id="covid-awareness">
 	<div class="container covid">
-		<h2 class="heading-secondary">Covid-19 Awareness</h2>
+		<h2 class="heading-secondary text-center">Covid-19 Awareness</h2>
 
-		<div class="covid__container">
-			<div class="covid__img-box">
-
+		<div class="covid__container row">
+			<div class="covid__img-box col-md-6">
+				<img
+					src="/images/Kids using hand sanitizer at school-bro.svg"
+					class="covid__img"
+					alt="Children sanitizing at school illustration"
+					title="Children sanitizing at school illustration"
+					loading="lazy"
+				/>
 			</div>
 
-			<div class="covid__text-box">
+			<div class="covid__text-box col-md-6">
+				<p>Our school follows all the covid-19 safety rules 
+					and we all work together to ensure the safety 
+					of all people that enter the school premises.</p>
 
+				<p>Any person from school staff to school 
+					children are all screened and sanitized 
+					at the gate upon entering the premises.</p>
+
+				<p>Children are advised to keep social distancing 
+					and wash their hands every now and then. 
+					The school does everything they can to keep everyone safe.</p>
+
+				<p>Parents should ensure that their children 
+					come to school wearing musks and anyone 
+					visiting the school adhears to the pandemic regulations.</p>
 			</div>
 		</div>
+		<p class="text-center">For more info on Covid-19 is South Africa visit <a href="https://sacoronavirus.co.za/" target="_blank" rel="noopener noreferrer">sacoronavirus.co.za</a></p>
 	</div>
 </section>
 
@@ -69,5 +90,5 @@
 </section>
 
 <script>
-	const posts = { features:  JSON.stringify(posts)  };
+	const posts = { features: <%- JSON.stringify(posts) %> };
 </script>

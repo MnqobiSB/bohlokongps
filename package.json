@@ -3,7 +3,15 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"start": "nodemon ./bin/www"
+		"start": "nodemon ./bin/www",
+
+		"watch:sass": "node-sass ./public/sass/main.scss ./public/stylesheets/style.css -w",
+		"devserver": "live-server",
+		"start:sass": "npm-run-all --parallel devserver watch:sass",
+		"compile:sass": "node-sass ./public/sass/main.scss ./public/stylesheets/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" ./public/stylesheets/style.comp.css -o ./public/stylesheets/style.prefix.css",
+		"compress:css": "node-sass stylesheets/style.prefix.css ./public/stylesheets/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css"
 	},
 	"dependencies": {
 		"@mapbox/mapbox-sdk": "^0.10.0",
