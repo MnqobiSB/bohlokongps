@@ -1,0 +1,49 @@
+.navbar {
+	background-color: $color-secondary-dark;
+	height: 8rem;
+	&-brand {
+		&:link,
+		&:visited {
+			color: $color-grey-light-1;
+			text-decoration: none;
+			font-size: 2.8rem;
+		}
+	}
+
+	&-nav {
+		margin-left: auto;
+	}
+}
+
+.nav {
+	&-item {
+		&:not(:last-child) {
+			margin-right: 1.2rem;
+		}
+	}
+
+	&-link {
+		&:link,
+		&:visited {
+			color: $color-grey-light-1;
+			font-size: 1.5rem;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: all .2s;
+			height: auto;
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-grey-light-1 !important;
+			background-color: $color-priamry !important;
+		}
+	}
+}
+
+.active {
+	color: $color-grey-light-1;
+	background-color: $color-priamry;
+}

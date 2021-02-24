@@ -1,0 +1,9 @@
+.header {
+	height: 95vh;
+	border-radius: 0 !important;
+	text-align: center;
+
+	&__text-box {
+		@include absCenter;
+	}
+}
