@@ -85,12 +85,12 @@ body {
     transform: translate(-50%, -50%); }
 
 .navbar {
-  background-color: #010365;
-  height: 8rem; }
+  background-color: #010365; }
   .navbar-brand:link, .navbar-brand:visited {
     color: #f7f7f7;
     text-decoration: none;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    margin: 2rem 0 2rem; }
   .navbar-nav {
     margin-left: auto; }
 
@@ -137,20 +137,17 @@ body {
 .covid {
   margin: 8rem 0 8rem; }
   .covid__img-box {
-    text-align: center;
-    display: grid;
-    align-content: center;
-    justify-items: start; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .covid__img {
-    width: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    width: 70%; }
   .covid__text-box {
-    display: grid;
-    align-content: center;
-    justify-items: start; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .covid__more-info {
     text-align: center;
     margin-top: 4rem; }
@@ -165,6 +162,15 @@ body {
 
 .qualities__container--one {
   margin-bottom: 10rem; }
+
+.qualities__img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.qualities__img {
+  width: 70%; }
 
 .news {
   margin-top: 8rem; }

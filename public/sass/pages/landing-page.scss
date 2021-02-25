@@ -2,21 +2,15 @@
 	margin: 8rem 0 8rem;
 
 	&__img-box {
-		text-align: center;
-		display: grid;
-		align-content: center;
-		justify-items: start;
+		@include flexCenter;
 	}
 
 	&__img {
 		width: 70%;
-		@include absCenter;
 	}
 
 	&__text-box {
-		display: grid;
-		align-content: center;
-		justify-items: start;
+		@include flexCenter;
 	}
 
 	&__more-info {
@@ -44,6 +38,12 @@
 .qualities {
 	&__container--one {
 		margin-bottom: 10rem;
+	}
+	&__img-box {
+		@include flexCenter;
+	}
+	&__img {
+		width: 70%;
 	}
 }
 .news {
