@@ -8,12 +8,16 @@ body {
 
 .heading-primary {
 	font-size: 5rem !important;
+	color: $color-grey-light-2;
+	font-weight: 700 !important;
 	margin-bottom: 2rem;
 
 	&--sub {
 		font-size: 2.5rem !important;
+		color: $color-secondary-dark;
+		font-weight: 500 !important;
 	}
 	&--line {
-		color: $color-priamry;
+		color: $color-primary;
 	}
 }
