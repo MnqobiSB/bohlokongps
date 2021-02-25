@@ -1,0 +1,28 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		background-color: $color-secondary;
+		color: $color-grey-light-1;
+		padding: 1.5rem 4rem;
+		transition: all .2s;
+		font-size: $default-font-size;
+
+		border: none;
+		cursor: pointer;
+	}
+
+	&:hover {
+		box-shadow: 0 1rem 2rem rgba($color-black, .2);
+		background-color: $color-secondary-dark;
+		color: $color-grey-light-1 !important;
+	}
+
+	/* * click-state */
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-1px);
+		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+	}
+}

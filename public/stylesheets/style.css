@@ -36,12 +36,17 @@ body {
     color: #006630; }
 
 .header {
-  height: 90vh;
+  height: 85vh;
   border-radius: 0 !important;
   text-align: center;
   background-image: linear-gradient(to right bottom, rgba(0, 102, 48, 0.8), rgba(0, 51, 24, 0.8)), url(../images/img/blog-2.jpg);
   background-size: cover;
   background-position: center; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
+      height: 85vh; } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -78,3 +83,22 @@ body {
 .active {
   color: #f7f7f7;
   background-color: #006630; }
+
+.btn {
+  /* * click-state */ }
+  .btn, .btn:link, .btn:visited {
+    background-color: #0204e1;
+    color: #f7f7f7;
+    padding: 1.5rem 4rem;
+    transition: all .2s;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer; }
+  .btn:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    background-color: #010365;
+    color: #f7f7f7 !important; }
+  .btn:active, .btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
