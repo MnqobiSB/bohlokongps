@@ -16,6 +16,9 @@ body {
   background-color: #006630;
   color: #f7f7f7; }
 
+.site-link {
+  color: #006630 !important; }
+
 body {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 300;
@@ -30,23 +33,51 @@ body {
   margin-bottom: 2rem; }
   .heading-primary--sub {
     font-size: 2.5rem !important;
+    font-family: "RocknRoll One", sans-serif !important;
     color: #010365;
     font-weight: 500 !important; }
   .heading-primary--line {
     color: #006630; }
 
+.heading-secondary {
+  font-size: 3.5rem !important;
+  font-family: "RocknRoll One", sans-serif !important;
+  text-align: center;
+  margin-bottom: 4rem; }
+
+.heading-tertiary {
+  font-size: 2.5rem !important;
+  font-family: "RocknRoll One", sans-serif !important;
+  margin-bottom: 2rem; }
+
+.color-red {
+  color: red; }
+
+.mb-large {
+  margin-bottom: 4rem; }
+
+.mb-medium {
+  margin-bottom: 3rem; }
+
+.mb-small {
+  margin-bottom: 2rem; }
+
 .header {
-  height: 85vh;
+  height: 87vh;
   border-radius: 0 !important;
   text-align: center;
   background-image: linear-gradient(to right bottom, rgba(0, 102, 48, 0.8), rgba(0, 51, 24, 0.8)), url(../images/img/blog-2.jpg);
   background-size: cover;
   background-position: center; }
+  @supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
+    .header {
+      -webkit-background-attachment: fixed;
+      background-attachment: fixed; } }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
       clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
-      height: 85vh; } }
+      height: 87vh; } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -102,3 +133,38 @@ body {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.covid {
+  margin: 8rem 0 8rem; }
+  .covid__img-box {
+    text-align: center;
+    display: grid;
+    align-content: center;
+    justify-items: start; }
+  .covid__img {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .covid__text-box {
+    display: grid;
+    align-content: center;
+    justify-items: start; }
+  .covid__more-info {
+    text-align: center;
+    margin-top: 4rem; }
+
+#school-qualities {
+  background-color: rgba(53, 56, 253, 0.4);
+  padding: 8rem 0 8rem; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    #school-qualities {
+      -webkit-clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%);
+      clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%); } }
+
+.qualities__container--one {
+  margin-bottom: 10rem; }
+
+.news {
+  margin-top: 8rem; }

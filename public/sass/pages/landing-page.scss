@@ -1,0 +1,51 @@
+.covid {
+	margin: 8rem 0 8rem;
+
+	&__img-box {
+		text-align: center;
+		display: grid;
+		align-content: center;
+		justify-items: start;
+	}
+
+	&__img {
+		width: 70%;
+		@include absCenter;
+	}
+
+	&__text-box {
+		display: grid;
+		align-content: center;
+		justify-items: start;
+	}
+
+	&__more-info {
+		text-align: center;
+		margin-top: 4rem;
+	}
+}
+
+#school-qualities {
+	background-color: rgba($color-secondary-light, .4);
+	padding: 8rem 0 8rem;
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(
+			25% 0%,
+			100% 10%,
+			100% 90%,
+			75% 100%,
+			0 90%,
+			0 10%
+		);
+		clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%);
+	}
+}
+.qualities {
+	&__container--one {
+		margin-bottom: 10rem;
+	}
+}
+.news {
+	margin-top: 8rem;
+}
