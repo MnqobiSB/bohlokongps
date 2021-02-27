@@ -14,7 +14,7 @@
 
 	&:hover {
 		box-shadow: 0 1rem 2rem rgba($color-black, .2);
-		background-color: $color-secondary-dark;
+		background-color: $color-secondary-light;
 		color: $color-grey-light-1 !important;
 	}
 
@@ -24,5 +24,37 @@
 		outline: none;
 		transform: translateY(-1px);
 		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+	}
+
+	&__secondary {
+		&,
+		&:link,
+		&:visited {
+			display: inline-block;
+			text-decoration: none;
+			background-color: $color-primary;
+			color: $color-grey-light-1;
+			padding: 1.5rem 4rem;
+			transition: all .2s;
+			font-size: $default-font-size;
+
+			border: none;
+			border-radius: 2.5px;
+			cursor: pointer;
+		}
+
+		&:hover {
+			box-shadow: 0 1rem 2rem rgba($color-black, .2);
+			background-color: $color-primary-light;
+			color: $color-grey-light-1 !important;
+		}
+
+		/* * click-state */
+		&:active,
+		&:focus {
+			outline: none;
+			transform: translateY(-1px);
+			box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		}
 	}
 }

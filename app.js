@@ -52,23 +52,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// set local variables middleware
-app.use(function (req, res, next) {
-	//require moment
-	app.locals.moment = require('moment');
-	res.locals.currentUser = req.user;
-	// set default page title
-	res.locals.title = 'Bohlokong Primary School - Welcome';
-	// set success flash message
-	res.locals.success = req.session.success || '';
-	delete req.session.success;
-	// set error flash message
-	res.locals.error = req.session.error || '';
-	delete req.session.error;
-	// continue on to next function in middleware chain
-	next();
-});
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

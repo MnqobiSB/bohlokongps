@@ -1,0 +1,8 @@
+.news {
+	@include flexCenter;
+
+	&__blog-card {
+		width: auto;
+		border: none !important;
+	}
+}
