@@ -161,10 +161,8 @@ body {
   justify-content: center;
   align-items: center; }
   .news__blog-card {
-    width: auto; }
-
-.news__blog-media--one {
-  margin-bottom: 4.6rem; }
+    width: auto;
+    border: none !important; }
 
 .covid {
   margin: 8rem 0 8rem; }
@@ -206,5 +204,3 @@ body {
 
 .news {
   margin-top: 8rem; }
-  .news__blog-post {
-    margin-bottom: 8rem; }
