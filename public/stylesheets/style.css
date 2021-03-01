@@ -62,6 +62,15 @@ body {
 .mb-small {
   margin-bottom: 2rem; }
 
+.footer {
+  background-color: #333;
+  padding: 8rem 0 7rem;
+  color: #f7f7f7; }
+  .footer__heading {
+    color: #009947;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+
 .header {
   height: 85vh;
   border-radius: 0 !important;
@@ -205,6 +214,4 @@ body {
   width: 70%; }
 
 .news {
-  margin-top: 8rem; }
-  .news__blog-post {
-    margin-bottom: 8rem; }
+  margin: 8rem 0 8rem; }

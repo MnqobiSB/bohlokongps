@@ -1,0 +1,11 @@
+.footer {
+	background-color: $color-grey-dark-3;
+	padding: 8rem 0 7rem;
+	color: $color-grey-light-1;
+
+	&__heading {
+		color: $color-primary-light;
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+}
