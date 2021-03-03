@@ -1,11 +1,51 @@
 .footer {
 	background-color: $color-grey-dark-3;
 	padding: 8rem 0 7rem;
-	color: $color-grey-light-1;
+	color: $color-white;
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(25% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+		clip-path: polygon(25% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+	}
 
 	&__heading {
 		color: $color-primary-light;
 		font-size: 2rem;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__list--item {
+		&:not(:last-child) {
+			margin-bottom: .25rem;
+		}
+		display: flex;
+		align-items: center;
+		&__address {
+			margin-left: 3rem;
+		}
+	}
+
+	&__nav-icon {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 1rem;
+		fill: $color-secondary-light;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-white;
+		}
+	}
+
+	&__copyright {
+		font-size: 1.5rem;
+		text-align: center;
+		margin-top: 4rem;
 	}
 }

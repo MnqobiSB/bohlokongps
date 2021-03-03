@@ -17,7 +17,8 @@ body {
   color: #f7f7f7; }
 
 .site-link {
-  color: #006630 !important; }
+  color: #006630 !important;
+  font-weight: 500 !important; }
 
 body {
   font-family: "Montserrat", sans-serif !important;
@@ -50,6 +51,12 @@ body {
   font-family: "RocknRoll One", sans-serif !important;
   margin-bottom: 2rem; }
 
+.color-green {
+  color: #006630; }
+
+.color-blue {
+  color: #0204e1; }
+
 .color-red {
   color: red; }
 
@@ -65,11 +72,35 @@ body {
 .footer {
   background-color: #333;
   padding: 8rem 0 7rem;
-  color: #f7f7f7; }
+  color: #ffffff; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .footer {
+      -webkit-clip-path: polygon(25% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+      clip-path: polygon(25% 0, 100% 10%, 100% 100%, 0 100%, 0 10%); } }
   .footer__heading {
     color: #009947;
     font-size: 2rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1.5rem; }
+  .footer__list {
+    list-style: none; }
+  .footer__list--item {
+    display: flex;
+    align-items: center; }
+    .footer__list--item:not(:last-child) {
+      margin-bottom: .25rem; }
+    .footer__list--item__address {
+      margin-left: 3rem; }
+  .footer__nav-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: #3538fd; }
+  .footer__link:link, .footer__link:visited {
+    color: #ffffff; }
+  .footer__copyright {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 4rem; }
 
 .header {
   height: 85vh;
@@ -176,7 +207,11 @@ body {
   margin-bottom: 4.6rem; }
 
 .covid {
-  margin: 8rem 0 8rem; }
+  margin: 8rem 0 8rem;
+  background-image: url(../images/background-2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
   .covid__img-box {
     display: flex;
     flex-direction: column;

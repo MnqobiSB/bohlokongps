@@ -1,6 +1,11 @@
 .covid {
 	margin: 8rem 0 8rem;
 
+	background-image: url(../images/background-2.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
 	&__img-box {
 		@include flexCenter;
 	}
