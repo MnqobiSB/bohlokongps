@@ -1,0 +1,24 @@
+#about-us {
+	padding: 8rem 0;
+}
+
+.about {
+	&__text-box {
+		margin-bottom: 8rem;
+	}
+
+	&__card {
+		text-align: center;
+	}
+
+	&__icon {
+		width: 7rem;
+		height: 7rem;
+		fill: $color-primary;
+		margin-bottom: 1rem;
+
+		// padding: .5rem;
+		// border-radius: 50%;
+		// background-color: $color-grey-dark;
+	}
+}

@@ -60,6 +60,9 @@ body {
 .color-red {
   color: red; }
 
+.color-light {
+  color: #f7f7f7; }
+
 .mb-large {
   margin-bottom: 4rem; }
 
@@ -206,6 +209,25 @@ body {
 .news__blog-media--one {
   margin-bottom: 4.6rem; }
 
+.page__header {
+  text-align: center;
+  border-radius: 0 !important;
+  position: relative;
+  margin-bottom: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(0, 102, 48, 0.8), rgba(0, 51, 24, 0.8)), url(../images/img/primary-school.jpg);
+  background-size: cover;
+  background-position: center; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .page__header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
+      height: 50vh; } }
+  .page__header--text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
 .covid {
   margin: 8rem 0 8rem;
   background-image: url(../images/background-2.png);
@@ -250,3 +272,18 @@ body {
 
 .news {
   margin: 8rem 0 8rem; }
+
+#about-us {
+  padding: 8rem 0; }
+
+.about__text-box {
+  margin-bottom: 8rem; }
+
+.about__card {
+  text-align: center; }
+
+.about__icon {
+  width: 7rem;
+  height: 7rem;
+  fill: #006630;
+  margin-bottom: 1rem; }
