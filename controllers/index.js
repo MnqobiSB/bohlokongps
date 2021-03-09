@@ -6,6 +6,7 @@ module.exports = {
 		const posts = await Post.find({});
 		res.render('index', {
 			posts,
+			page: 'home',
 			title: 'Bohlokong Primary School - Welcome!'
 		});
 	}
