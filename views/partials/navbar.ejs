@@ -1,7 +1,13 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img src="/images/logo.png" alt="Bells logo" loading="lazy" width="100">
+      <img 
+        src="/images/logo.png"
+        class="navbar-brand__logo" 
+        alt="Bohlokong Primary Logo" 
+        title="Bohlokong Primary Logo"
+        loading="lazy" 
+      />
       Bohlokong P.S
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +33,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/staff">Our Staff</a>
+          <a 
+            class="nav-link <%= typeof page !== 'undefined' && page === 'staff' ? 'active' : '' %>" 
+            href="/staff"
+          >
+            Our Staff
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/gallery">Gallery</a>

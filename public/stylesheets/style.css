@@ -129,11 +129,14 @@ body {
 
 .navbar {
   background-color: #010365; }
+  .navbar-brand__logo {
+    height: 5.5rem;
+    width: 5.5rem; }
   .navbar-brand:link, .navbar-brand:visited {
     color: #f7f7f7;
     text-decoration: none;
     font-size: 2.4rem;
-    margin: 2rem 0 2rem; }
+    margin: 1rem 0; }
   .navbar-nav {
     margin-left: auto; }
 
@@ -287,3 +290,9 @@ body {
   height: 7rem;
   fill: #006630;
   margin-bottom: 1rem; }
+
+#our-staff {
+  padding: 8rem 0; }
+
+.staff__card {
+  margin-bottom: 3rem; }
