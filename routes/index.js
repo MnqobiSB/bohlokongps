@@ -30,10 +30,10 @@ router.get('/gallery', (req, res) => {
 	});
 });
 // GET /calender
-router.get('/calenda', (req, res) => {
-	res.render('calenda', {
-		title: 'School Calenda',
-		page: 'calenda'
+router.get('/calendar', (req, res) => {
+	res.render('calendar', {
+		title: 'School Calendar',
+		page: 'calendar'
 	});
 });
 // GET /documents

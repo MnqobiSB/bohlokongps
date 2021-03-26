@@ -41,10 +41,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/gallery">Gallery</a>
+          <a 
+            class="nav-link <%= typeof page !== 'undefined' && page === 'gallery' ? 'active' : '' %>" 
+            href="/gallery"
+          >
+            Gallery
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/calenda">Calenda</a>
+          <a class="nav-link" href="/calendar">Calendar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/documents">Documents</a>
