@@ -296,3 +296,8 @@ body {
 
 .staff__card {
   margin-bottom: 3rem; }
+
+.gallery {
+  margin: 8rem 0 8rem; }
+  .gallery__img {
+    margin-bottom: 4rem; }
