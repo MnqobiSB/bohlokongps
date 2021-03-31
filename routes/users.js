@@ -15,7 +15,7 @@ const {
 	putForgotPw,
 	getReset,
 	putReset
-} = require('../controllers/user');
+} = require('../controllers/users');
 const {
 	asyncErrorHandler,
 	isLoggedIn,
