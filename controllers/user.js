@@ -8,9 +8,13 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 
 module.exports = {
-	// GET /register
+	// GET /Signup
 	getSignup (req, res, next) {
-		res.render('register', { title: 'Register', username: '', email: '' });
+		res.render('user/signup', {
+			title: 'Sign Up',
+			username: '',
+			email: ''
+		});
 	},
 	// POST /register
 	async postSignup (req, res, next) {
@@ -25,7 +29,7 @@ module.exports = {
 			);
 			req.login(user, function (err) {
 				if (err) return next(err);
-				req.session.success = `Welcome to Skate Shop, ${user.username}!`;
+				req.session.success = `Welcome to Bohlokong Primary School, ${user.username}!`;
 				res.redirect('/');
 			});
 		} catch (err) {
@@ -38,21 +42,21 @@ module.exports = {
 			) {
 				error = 'A user with the given email is already registered!';
 			}
-			res.render('register', {
-				title: 'Register',
+			res.render('user/signup', {
+				title: 'Sign In',
 				username,
 				email,
 				error
 			});
 		}
 	},
-	// GET /login
+	// GET /signin
 	getSignin (req, res, next) {
 		if (req.isAuthenticated()) return res.redirect('/');
 		if (req.query.returnTo) req.session.redirectTo = req.headers.referer;
-		res.render('login', { title: 'Login' });
+		res.render('user/signin', { title: 'Sign In' });
 	},
-	// POST /login
+	// POST /signin
 	async postSignin (req, res, next) {
 		const { username, password } = req.body;
 		const { user, error } = await User.authenticate()(username, password);

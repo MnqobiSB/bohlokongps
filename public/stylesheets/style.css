@@ -282,6 +282,15 @@ body {
 .qualities__img {
   width: 70%; }
 
+.qualities__text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.qualities__text {
+  font-size: 2rem; }
+
 .news {
   margin: 8rem 0 8rem; }
 
@@ -330,10 +339,13 @@ body {
 .contact {
   margin: 8rem 0 8rem; }
   .contact__img-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    position: relative; }
+  .contact__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; }
   .contact__input {
     font-size: 1.6rem !important;
     font-family: inherit !important;

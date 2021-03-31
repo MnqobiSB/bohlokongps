@@ -50,6 +50,12 @@
 	&__img {
 		width: 70%;
 	}
+	&__text-box {
+		@include flexCenter;
+	}
+	&__text {
+		font-size: 2rem;
+	}
 }
 .news {
 	margin: 8rem 0 8rem;

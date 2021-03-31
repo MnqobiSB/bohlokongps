@@ -23,10 +23,10 @@ const {
 	changePassword
 } = require('../middleware');
 
-/* GET /signin */
+/* GET /signup */
 router.get('/signup', getSignup);
 
-/* POST /signin */
+/* POST /signup */
 router.post('/signup', upload.single('image'), asyncErrorHandler(postSignup));
 
 /* GET /login */

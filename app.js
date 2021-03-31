@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const User = require('./models/user');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
@@ -51,6 +52,31 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// set local variables middleware
+app.use(function (req, res, next) {
+	// req.user = {
+	//   '_id' : '5eb4439c7f321211888ea8b9',
+	//   // '_id' : '5eb4f6dd36cefc1e10a23e49',
+	//   // '_id' : '5eb661922ac90909547cc2f1',
+	//   'username' : 'mnqobi'
+	// }
+	res.locals.currentUser = req.user;
+	// set default page title
+	res.locals.title = 'Bohlokong Primary School - Welcome!';
+	// set success flash message
+	res.locals.success = req.session.success || '';
+	delete req.session.success;
+	// set error flash message
+	res.locals.error = req.session.error || '';
+	delete req.session.error;
+	// continue on to next function in middleware chain
+	next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

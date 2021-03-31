@@ -2,7 +2,12 @@
 	margin: 8rem 0 8rem;
 
 	&__img-box {
-		@include flexCenter;
+		position: relative;
+	}
+
+	&__img {
+		@include absCenter;
+		width: 100%;
 	}
 
 	&__input {
