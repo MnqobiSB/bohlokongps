@@ -201,6 +201,15 @@ body {
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+.contact__btn {
+  background-color: #0204e1;
+  color: #f7f7f7;
+  padding: 1.5rem 4rem;
+  transition: all .2s;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
 .news {
   display: flex;
   flex-direction: column;
@@ -317,3 +326,24 @@ body {
   .calendar__icon {
     margin-bottom: 2rem;
     fill: #006630; }
+
+.contact {
+  margin: 8rem 0 8rem; }
+  .contact__img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .contact__input {
+    font-size: 1.6rem !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    padding: 1.5rem 2rem !important;
+    height: 5rem !important; }
+  .contact__textarea {
+    height: 12rem !important;
+    margin-bottom: 2rem;
+    font-size: 1.6rem !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    padding: 1.5rem 2rem !important; }

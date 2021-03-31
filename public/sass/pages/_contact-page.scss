@@ -1,0 +1,24 @@
+.contact {
+	margin: 8rem 0 8rem;
+
+	&__img-box {
+		@include flexCenter;
+	}
+
+	&__input {
+		font-size: 1.6rem !important;
+		font-family: inherit !important;
+		color: inherit !important;
+		padding: 1.5rem 2rem !important;
+		height: 5rem !important;
+	}
+
+	&__textarea {
+		height: 12rem !important;
+		margin-bottom: 2rem;
+		font-size: 1.6rem !important;
+		font-family: inherit !important;
+		color: inherit !important;
+		padding: 1.5rem 2rem !important;
+	}
+}
