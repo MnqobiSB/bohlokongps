@@ -25,6 +25,12 @@ const middleware = {
 		req.session.error = 'Access denied!';
 		res.redirect('back');
 	},
+	isRegisteredAdmin: (req, res, next) => {
+		if (req.user.isAdmin) return next();
+		req.session.error = 'Access Denied! Bye Bye';
+		req.session.redirectTo = req.originalUrl;
+		res.redirect('back');
+	},
 	isValidPassword: async (req, res, next) => {
 		const { user } = await User.authenticate()(
 			req.user.username,

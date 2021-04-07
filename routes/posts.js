@@ -7,6 +7,7 @@ const {
 	asyncErrorHandler,
 	isLoggedIn,
 	isAuthor,
+	isRegisteredAdmin,
 	searchAndFilterPosts
 } = require('../middleware');
 const {
@@ -27,12 +28,13 @@ router.get(
 );
 
 /* GET posts New /posts/new */
-router.get('/new', isLoggedIn, postNew);
+router.get('/new', isLoggedIn, isRegisteredAdmin, postNew);
 
 /* POST posts Create /posts */
 router.post(
 	'/',
 	isLoggedIn,
+	isRegisteredAdmin,
 	upload.array('images', 4),
 	asyncErrorHandler(postCreate)
 );
@@ -41,12 +43,19 @@ router.post(
 router.get('/:id', asyncErrorHandler(postShow));
 
 /* GET posts edit /posts/:id/edit */
-router.get('/:id/edit', isLoggedIn, asyncErrorHandler(isAuthor), postEdit);
+router.get(
+	'/:id/edit',
+	isLoggedIn,
+	isRegisteredAdmin,
+	asyncErrorHandler(isAuthor),
+	postEdit
+);
 
 /* PUT posts update /posts/:id */
 router.put(
 	'/:id',
 	isLoggedIn,
+	isRegisteredAdmin,
 	asyncErrorHandler(isAuthor),
 	upload.array('images', 4),
 	asyncErrorHandler(postUpdate)
@@ -56,6 +65,7 @@ router.put(
 router.delete(
 	'/:id',
 	isLoggedIn,
+	isRegisteredAdmin,
 	asyncErrorHandler(isAuthor),
 	asyncErrorHandler(postDestroy)
 );

@@ -12,6 +12,7 @@ const User = require('./models/user');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
+// require routes
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts');
