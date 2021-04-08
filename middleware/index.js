@@ -14,7 +14,7 @@ const middleware = {
 		if (req.isAuthenticated()) return next();
 		req.session.error = 'You need to be logged in to do that!';
 		req.session.redirectTo = req.originalUrl;
-		res.redirect('/login');
+		res.redirect('/users/signin');
 	},
 	isAuthor: async (req, res, next) => {
 		const post = await Post.findById(req.params.id);
