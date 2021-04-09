@@ -6,6 +6,10 @@ const UserSchema = new Schema({
 	firstName: String,
 	lastName: String,
 	email: { type: String, unique: true, required: true },
+	isAdmin: {
+		type: Boolean,
+		default: false
+	},
 	image: {
 		secure_url: { type: String, default: '/images/default-profile.png' },
 		public_id: String
