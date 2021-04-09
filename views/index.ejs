@@ -110,20 +110,24 @@
 		<div class="news__container row">
 			<div class="news__blog-container col-md-5">
 				<div class="news__blog-post">
+					<% posts.forEach(function(post){ %>
 					<div class="card news__blog-card">
+						<% post.images.forEach(function(image){ %>
 						<img 
-							src="/images/img/blog-2.jpg" 
+							src="<%= image.url %>" 
 							class="card-img-top news__blog-img" 
-							alt="Blog post 1 image" 
-							title="Blog post 1 image" 
+							alt="<%= post.title %> image" 
+							title="<%= post.title %> image" 
 							loading="lazy"
 						/>
+						<% }) %>
 						<div class="card-body news__blog-body">
-							<h3 class="card-title heading-tertiary">Latest News 1</h3>
-							<p class="card-text news__blog-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn__secondary">Read More..</a>
+							<h3 class="card-title heading-tertiary"><%= post.title %></h3>
+							<p class="card-text news__blog-text"><%= post.description %></p>
+							<a href="/posts/<%= post.id %>" class="btn__secondary">Read More..</a>
 						</div>
 					</div>
+					<% }); %>
 				</div>
 			</div>
 
