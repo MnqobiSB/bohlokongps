@@ -90,6 +90,8 @@ module.exports = {
 		// update the post with any new properties
 		post.title = req.body.post.title;
 		post.description = req.body.post.description;
+		post.mainPost = req.body.post.mainPost;
+		post.featuredPost = req.body.post.featuredPost;
 		// save the updated post into the db
 		await post.save();
 		req.session.success = 'Post updated successfully!';

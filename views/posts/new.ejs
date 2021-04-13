@@ -11,5 +11,27 @@
 	<div>
 		<textarea name="post[description]" placeholder="Description"></textarea>
 	</div>
+	<div class="form-group">
+		<label for="main">Is Main Post?</label>
+		<select
+			name="post[mainPost]"
+			id="main"
+			class="form-control">
+			<option disabled selected>Choose...</option>
+			<option value="true">Yes</option>
+			<option value="false">No</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="featured">Is Featured Post?</label>
+		<select
+			name="post[featuredPost]"
+			id="featured"
+			class="form-control">
+			<option disabled selected>Choose...</option>
+			<option value="true">Yes</option>
+			<option value="false">No</option>
+		</select>
+	</div>
 	<input type="submit">
 </form>

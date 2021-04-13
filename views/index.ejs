@@ -111,71 +111,56 @@
 			<div class="news__blog-container col-md-5">
 				<div class="news__blog-post">
 					<% posts.forEach(function(post){ %>
-					<div class="card news__blog-card">
-						<% post.images.forEach(function(image){ %>
-						<img 
-							src="<%= image.url %>" 
-							class="card-img-top news__blog-img" 
-							alt="<%= post.title %> image" 
-							title="<%= post.title %> image" 
-							loading="lazy"
-						/>
-						<% }) %>
-						<div class="card-body news__blog-body">
-							<h3 class="card-title heading-tertiary"><%= post.title %></h3>
-							<p class="card-text news__blog-text"><%= post.description %></p>
-							<a href="/posts/<%= post.id %>" class="btn__secondary">Read More..</a>
-						</div>
-					</div>
+						<% if (post.mainPost) { %>
+							<div class="card news__blog-card">
+								<% post.images.forEach(function(image){ %>
+									<img 
+										src="<%= image.url %>" 
+										class="card-img-top news__blog-img" 
+										alt="<%= post.title %> image" 
+										title="<%= post.title %> image" 
+										loading="lazy"
+									/>
+								<% }) %>
+								<div class="card-body news__blog-body">
+									<h3 class="card-title heading-tertiary"><%= post.title %></h3>
+									<p class="card-text news__blog-text"><%= post.description.substring(0, 100) %>[...]</p>
+									<a href="/posts/<%= post.id %>" class="btn__secondary">Read More..</a>
+								</div>
+							</div>
+						<% } %>
 					<% }); %>
 				</div>
 			</div>
 
 			<!-- Media Blog Card 1 -->
 			<div class="news__blog-container col-md-7">
-				<div class="card news__blog-media news__blog-media--one">
-					<div class="row no-gutters">
-						<div class="col-md-6">
-							<img 
-							src="/images/img/blog-2.jpg" 
-							class="card-img" 
-							alt="Blog post 2 image" 
-							title="Blog post 2 image"
-							loading="lazy"
-						/>
-						</div>
-						<div class="col-md-6">
-							<div class="card-body">
-								<h3 class="card-title heading-tertiary">Card title</h3>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional.</p>
-								<a href="#" class="btn__secondary">Read More..</a>
+				<% posts.forEach(function(post){ %>
+					<% if (post.featuredPost) { %>
+						<div class="card news__blog-media news__blog-media--one">
+							<div class="row no-gutters">
+								<div class="col-md-6">
+									<% post.images.forEach(function(image){ %>
+										<img 
+											src="<%= image.url %>" 
+											class="card-img" 
+											alt="Blog post 2 image" 
+											title="Blog post 2 image"
+											loading="lazy"
+										/>
+									<% }) %>
+								</div>
+								<div class="col-md-6">
+									<div class="card-body">
+										<h3 class="card-title heading-tertiary"><%= post.title %></h3>
+										<p class="card-text"><%= post.description.substring(0, 100) %>[...]</p>
+										<a href="/posts/<%= post.id %>" class="btn__secondary">Read More..</a>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-
-				<!-- Media Blog Card 2 -->
-				<div class="card news__blog-media">
-					<div class="row no-gutters">
-						<div class="col-md-6">
-							<img 
-							src="/images/img/blog-2.jpg" 
-							class="card-img" 
-							alt="Blog post 2 image" 
-							title="Blog post 2 image"
-							loading="lazy"
-						/>
-						</div>
-						<div class="col-md-6">
-							<div class="card-body">
-								<h3 class="card-title heading-tertiary">Card title</h3>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional.</p>
-								<a href="#" class="btn__secondary">Read More..</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
+					<% } %>
+				<% }); %>
 			</div>
 		</div>
 	</div>

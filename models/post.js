@@ -6,7 +6,14 @@ const PostSchema = new Schema({
 	title: String,
 	description: String,
 	images: [ { url: String, public_id: String } ],
-
+	mainPost: {
+		type: Boolean,
+		default: false
+	},
+	featuredPost: {
+		type: Boolean,
+		default: false
+	},
 	author: {
 		type: Schema.Types.ObjectId,
 		ref: 'User'
