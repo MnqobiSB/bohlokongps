@@ -29,7 +29,7 @@ module.exports = {
 			);
 			req.login(user, function (err) {
 				if (err) return next(err);
-				req.session.success = `Welcome to Bohlokong Primary School, ${user.username}!`;
+				req.session.success = `You have signed up successfully, Welcome ${user.username}!`;
 				res.redirect('/');
 			});
 		} catch (err) {
@@ -63,7 +63,7 @@ module.exports = {
 		if (!user && error) return next(error);
 		req.login(user, function (err) {
 			if (err) return next(err);
-			req.session.success = `Welcome back, ${username}!`;
+			req.session.success = `Sign in successful, Welcome back ${username}!`;
 			const redirectUrl = req.session.redirectTo || '/';
 			delete req.session.redirectTo;
 			res.redirect(redirectUrl);
@@ -72,6 +72,7 @@ module.exports = {
 	// GET /logout
 	getSignout (req, res, next) {
 		req.logout();
+		req.session.success = 'Sign out successful, good bye!';
 		res.redirect('/');
 	},
 	// GET /profile
