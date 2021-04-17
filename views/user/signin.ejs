@@ -1,4 +1,12 @@
 <% layout('layouts/boilerplate') -%>
+<div class="jumbotron jumbotron-fluid page__header">
+  <div class="container">
+    <div class="page__header--text-box">
+      <h1 class="display-4 heading-primary page__header--heading color-light">Admin Sign In</h1>
+      <p class="lead heading-primary--sub">Sign In To Perform Admin Tasks.</p>
+    </div>
+  </div>
+</div>
 
 <section id="signin">
 	<div class="container contact">
@@ -13,11 +21,12 @@
 						<label class="contact__label" for="password">Password</label>
 						<input type="password" id="password" class="form-control contact__input" name="password" placeholder="password" required>
 					</div>
-					
-					<button type="submit" class="contact__btn">Submit</button>
+					<div class="form-group">
+						<button type="submit" class="contact__btn">Submit</button>
+					</div>
 				</form>
 				
-				<div class="mt-4">
+				<div class="form-group mt-4">
 					<a href="/forgot-password">Forgot password?</a>
 				</div>
 			</div>

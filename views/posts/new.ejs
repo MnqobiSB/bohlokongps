@@ -1,37 +1,57 @@
 <% layout('layouts/boilerplate') -%>
-<h1>New Post!</h1>
+<div class="jumbotron jumbotron-fluid page__header">
+  <div class="container">
+    <div class="page__header--text-box">
+      <h1 class="display-4 heading-primary page__header--heading color-light">New Post</h1>
+      <p class="lead heading-primary--sub">Add A New Post.</p>
+    </div>
+  </div>
+</div>
 
-<form action="/posts" method="POST" enctype="multipart/form-data">
-	<div>
-		<input type="text" name="post[title]" placeholder="Title">
+<section id="signin">
+	<div class="container contact">
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<form action="/posts" method="POST" class="contact__form" enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="title" class="contact__label">Title</label>
+						<input type="text" id="title" class="form-control contact__input" name="post[title]" placeholder="Title">
+					</div>
+					<div class="form-group">
+						<label for="image" class="contact__label">Image</label>
+						<input type="file" id="image" class="form-control contact__input" accept="images/*" name="images" multiple />
+					</div>
+					<div class="form-group">
+						<label for="description" class="contact__label">News Content</label>
+						<textarea name="post[description]" id="description" class="form-control contact__textarea" placeholder="Description" rows="6"></textarea>
+					</div>
+					<div class="form-group">
+						<label for="main" class="contact__label">Is Main Post?</label>
+						<select
+							name="post[mainPost]"
+							id="main"
+							class="form-control contact__input">
+							<option disabled selected>Choose...</option>
+							<option value="true">Yes</option>
+							<option value="false">No</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="featured" class="contact__label">Is Featured Post?</label>
+						<select
+							name="post[featuredPost]"
+							id="featured"
+							class="form-control contact__input">
+							<option disabled selected>Choose...</option>
+							<option value="true">Yes</option>
+							<option value="false">No</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="contact__btn">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div>
-		<input type="file" accept="images/*" name="images" multiple />
-	</div>
-	<div>
-		<textarea name="post[description]" placeholder="Description"></textarea>
-	</div>
-	<div class="form-group">
-		<label for="main">Is Main Post?</label>
-		<select
-			name="post[mainPost]"
-			id="main"
-			class="form-control">
-			<option disabled selected>Choose...</option>
-			<option value="true">Yes</option>
-			<option value="false">No</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label for="featured">Is Featured Post?</label>
-		<select
-			name="post[featuredPost]"
-			id="featured"
-			class="form-control">
-			<option disabled selected>Choose...</option>
-			<option value="true">Yes</option>
-			<option value="false">No</option>
-		</select>
-	</div>
-	<input type="submit">
-</form>
+</section>

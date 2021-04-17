@@ -31,5 +31,25 @@
   <!-- Bootstrap Support Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- CKEditor -->
+	<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js"
+    integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    CKEDITOR.plugins.addExternal('a11ychecker', 'https://ckeditor.com/docs/ckeditor4/4.14.1/examples/assets/plugins/a11ychecker/', 'plugin.js');
+
+    // Performance optimization:
+    // Send a request for tests JSON file ASAP, so it's likely to be ready when the user runs Acessibility Checker.
+    $.getJSON('https://ckeditor.com/docs/vendors/4.14.1/ckeditor/assets/plugins/a11ychecker/libs/quail/tests.json');
+
+    CKEDITOR.replace('description', {
+      extraPlugins: 'a11ychecker',
+      height: 500
+    });
+  </script>
 </body>
 </html>
