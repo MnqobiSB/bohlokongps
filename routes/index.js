@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { landingPage } = require('../controllers');
+const { landingPage, postContact } = require('../controllers');
 const { asyncErrorHandler } = require('../middleware');
 
 // Index Routes
@@ -50,5 +50,8 @@ router.get('/contact', (req, res) => {
 		page: 'contact'
 	});
 });
+
+/* POST /contact */
+router.post('/contact', asyncErrorHandler(postContact));
 
 module.exports = router;
