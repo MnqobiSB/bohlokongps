@@ -42,6 +42,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+//require moment
+app.locals.moment = require('moment');
 
 // configure passport and sessions
 app.use(
@@ -61,12 +63,6 @@ passport.deserializeUser(User.deserializeUser());
 
 // set local variables middleware
 app.use(function (req, res, next) {
-	// req.user = {
-	//   '_id' : '5eb4439c7f321211888ea8b9',
-	//   // '_id' : '5eb4f6dd36cefc1e10a23e49',
-	//   // '_id' : '5eb661922ac90909547cc2f1',
-	//   'username' : 'mnqobi'
-	// }
 	res.locals.currentUser = req.user;
 	// set default page title
 	res.locals.title = 'Bohlokong Primary School - Welcome!';
