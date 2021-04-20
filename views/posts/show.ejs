@@ -2,8 +2,8 @@
 <div class="jumbotron jumbotron-fluid page__header">
   <div class="container">
     <div class="page__header--text-box">
-      <h1 class="display-4 heading-primary page__header--heading color-light">New Post</h1>
-      <p class="lead heading-primary--sub">Add A New Post.</p>
+      <h1 class="display-4 heading-primary page__header--heading color-light"><%= post.title %></h1>
+      <p class="lead heading-primary--sub">Read the whole news article.</p>
     </div>
   </div>
 </div>
@@ -12,25 +12,29 @@
 	<div class="container contact">
 		<div class="row">
 			<div class="col-md-8 offset-2">
-				<h1><%= post.title %></h1>
-				<div><%= post.description %></div>
-				<div>
+				<div class="card mb-3">
 					<% post.images.forEach(function(image){ %>
-						<img src="<%= image.url %>" alt="skateboard image" width="100px">
+						<img src="<%= image.url %>" class="card-img-top" alt="...">
 					<% }) %>
-				</div>
-				<% if (currentUser && post.author.equals(currentUser._id)) { %>
-				<div>
-					<a href="/posts/<%= post.id %>/edit">
-						<button>Edit post</button>
-					</a>
+					<div class="card-body">
+						<h2 class="card-title heading-tertiary"><%= post.title %></h2>
+						<p class="card-text"><%= post.description %></p>
+						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
 				</div>
 
-				<div>
-					<form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
-						<input type="submit" value="Delete">
-					</form>
-				</div>
+				<% if (currentUser && post.author.equals(currentUser._id)) { %>
+					<div>
+						<a href="/posts/<%= post.id %>/edit">
+							<button>Edit post</button>
+						</a>
+					</div>
+
+					<div>
+						<form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+							<input type="submit" value="Delete">
+						</form>
+					</div>
 				<% } %>
 			</div>
 		</div>	

@@ -109,7 +109,7 @@ body {
   height: 85vh;
   border-radius: 0 !important;
   text-align: center;
-  background-image: linear-gradient(to right bottom, rgba(0, 102, 48, 0.8), rgba(0, 51, 24, 0.8)), url(../images/img/blog-2.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 102, 48, 0.8), rgba(0, 51, 24, 0.8)), url(../images/img/background.JPG);
   background-size: cover;
   background-position: center; }
   @supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
