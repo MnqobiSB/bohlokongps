@@ -272,9 +272,16 @@ body {
 #school-qualities {
   background-color: rgba(53, 56, 253, 0.4);
   padding: 8rem 0 8rem; }
+  @media only screen and (max-width: 56.25em) {
+    #school-qualities {
+      padding: 12rem 0 12rem; } }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     #school-qualities {
       -webkit-clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%);
+      clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%); } }
+  @media only screen and (max-width: 56.25em) {
+    #school-qualities {
+      -webkit-clip-path: polygon(25% 0%, 100% 20%, 100% 80%, 75% 100%, 0 90%, 0 10%);
       clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%); } }
 
 .qualities__container--one {
