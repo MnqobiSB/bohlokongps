@@ -27,6 +27,11 @@
 		&__address {
 			margin-left: 3rem;
 		}
+		&-email {
+			@media only screen and (max-width: $bp-medium) {
+				display: none;
+			}
+		}
 	}
 
 	&__nav-icon {

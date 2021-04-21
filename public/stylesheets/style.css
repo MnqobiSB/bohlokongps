@@ -8,7 +8,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; }
-  @media only screen and (max-width: 68.75em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
 
@@ -97,6 +97,9 @@ body {
       margin-bottom: .25rem; }
     .footer__list--item__address {
       margin-left: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__list--item-email {
+        display: none; } }
   .footer__nav-icon {
     width: 2rem;
     height: 2rem;
