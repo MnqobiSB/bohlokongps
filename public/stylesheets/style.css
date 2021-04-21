@@ -14,7 +14,7 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 ::selection {
   background-color: #006630;
@@ -132,7 +132,7 @@ body {
     transform: translate(-50%, -50%); }
 
 .navbar {
-  background-color: #010365; }
+  background-color: #010365 !important; }
   .navbar-brand__logo {
     height: 5.5rem;
     width: 5.5rem; }
