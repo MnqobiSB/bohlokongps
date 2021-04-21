@@ -8,9 +8,13 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
 
 ::selection {
   background-color: #006630;
@@ -339,12 +343,11 @@ body {
 .contact {
   margin: 8rem 0 8rem; }
   .contact__img-box {
-    position: relative; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .contact__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%; }
   .contact__input {
     font-size: 1.6rem !important;

@@ -2,11 +2,10 @@
 	margin: 8rem 0 8rem;
 
 	&__img-box {
-		position: relative;
+		@include flexCenter;
 	}
 
 	&__img {
-		@include absCenter;
 		width: 100%;
 	}
 
