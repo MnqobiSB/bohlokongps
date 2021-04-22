@@ -268,6 +268,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .covid__text-box {
+        text-align: center; } }
   .covid__more-info {
     text-align: center;
     margin-top: 4rem; }
@@ -277,7 +280,7 @@ body {
   padding: 8rem 0 8rem; }
   @media only screen and (max-width: 56.25em) {
     #school-qualities {
-      padding: 16rem 0 16rem; } }
+      padding: 14rem 0 14rem; } }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     #school-qualities {
       -webkit-clip-path: polygon(25% 0%, 100% 10%, 100% 90%, 75% 100%, 0 90%, 0 10%);
@@ -304,6 +307,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .qualities__text-box {
+      text-align: center; } }
 
 .qualities__text {
   font-size: 2rem; }

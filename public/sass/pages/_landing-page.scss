@@ -16,6 +16,9 @@
 
 	&__text-box {
 		@include flexCenter;
+		@media only screen and (max-width: $bp-medium) {
+			text-align: center;
+		}
 	}
 
 	&__more-info {
@@ -29,7 +32,7 @@
 	padding: 8rem 0 8rem;
 
 	@media only screen and (max-width: $bp-medium) {
-		padding: 16rem 0 16rem;
+		padding: 14rem 0 14rem;
 	}
 
 	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
@@ -67,6 +70,9 @@
 	}
 	&__text-box {
 		@include flexCenter;
+		@media only screen and (max-width: $bp-medium) {
+			text-align: center;
+		}
 	}
 	&__text {
 		font-size: 2rem;
