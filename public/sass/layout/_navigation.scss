@@ -30,7 +30,7 @@
 	&-link {
 		&:link,
 		&:visited {
-			color: $color-grey-light-1;
+			color: $color-grey-light-1 !important;
 			font-size: 1.5rem;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -44,6 +44,9 @@
 		&:active {
 			color: $color-grey-light-1 !important;
 			background-color: $color-primary !important;
+		}
+		&__admin-link {
+			color: $color-black !important;
 		}
 	}
 }

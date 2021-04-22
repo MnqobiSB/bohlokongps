@@ -151,7 +151,7 @@ body {
   margin-right: 1.2rem; }
 
 .nav-link:link, .nav-link:visited {
-  color: #f7f7f7;
+  color: #f7f7f7 !important;
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -163,6 +163,9 @@ body {
 .nav-link:hover, .nav-link:active {
   color: #f7f7f7 !important;
   background-color: #006630 !important; }
+
+.nav-link__admin-link {
+  color: #000 !important; }
 
 .active {
   color: #f7f7f7;
