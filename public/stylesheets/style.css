@@ -325,6 +325,9 @@ body {
 
 .about__card {
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .about__card {
+      margin-bottom: 4rem; } }
 
 .about__icon {
   width: 7rem;
